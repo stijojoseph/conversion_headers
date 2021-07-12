@@ -14,6 +14,8 @@
 int char_to_int(char *f);
 char *int_to_char(int c);
 int string_to_hex(char *hex);
+int integer_to_bcd(int num);
+int bcd_to_integer(int num);
 
 
 

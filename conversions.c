@@ -90,3 +90,26 @@ c+=(hex[i]-'0')*pow(16,j) ;
 
 return c;
 }
+int integer_to_bcd(int num)
+{
+
+int ones=num%10;
+int tens=num/10;
+
+num=(tens<<4)|ones;
+
+
+return num;
+}
+
+int bcd_to_integer(int num)
+{
+
+	int ones=(num & 0x0F);
+	int tens=(num & 0xF0);
+tens=tens>>4;
+	return (tens*10+ones);
+
+
+
+}
